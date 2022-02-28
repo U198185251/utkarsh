@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+  {%block code_block %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+    <script src="script.js"></script>
+    <!--<div class="controller">-->
+    <!--    <button id="snap">Capture</button>-->
+    <!--</div>-->
+    <!--<canvas id="canvas" width="640" height="480"></canvas>-->
+    <div id="container">
+      <h1 style="color: blue;">Insta Mood Lamp</h1>
+      <div class="btn">
+          <button type="submit" class='detect_btn' onclick="detect()">DETECT</button>
+          <button type="submit" class='stop_cam_btn' onclick="stop_cam()">STOP</button>
+      </div>
+        <video autoplay="true" id="videoElement"></video>
+    </div>
+    
+    <!-- Webcam video snapshot -->
+    <canvas id="canvas" width="640" height="480"></canvas>
+  {% endblock %}
